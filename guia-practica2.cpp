@@ -44,5 +44,30 @@ system("color E0");
 Sleep(amarrillo);
 }
 
+void *rojo(void *tid)
+{
+system("cls"); 
+system("color 40");
+ Sleep(rojos);
+}
+int main()
+{
+int i = 1;
+pthread_t pthread_rojo, pthread_naranja, pthread_verde;
+
+pthread_create (&pthread_verde, NULL, verde, (void *)i); pthread_join(pthread_verde, NULL);
+
+pthread_create (&pthread_naranja,NULL, naranja, (void *)i); pthread_join(pthread_naranja, NULL);
+
+pthread_create (&pthread_rojo, NULL, rojo, (void *)i); pthread_join(pthread_rojo, NULL);
+
+
+int tiempoSimulacion, tiempo;
+int semaforo1 = 0, semaforo2 = 1;
+bool entraPrimerVez = true; 
+time_t comienzo, actual;
+printf( "Introduzca el tiempo en segundos en el que se va a realizar la simulacion" );
+printf("\n");
+scanf( "%d", &tiempoSimulacion );
 
 
