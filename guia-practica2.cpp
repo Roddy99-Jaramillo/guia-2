@@ -27,10 +27,15 @@ void *rojo(void*);
 void *verde(void *tid)
 {
 printf( "Introduzca el tiempo del color Verde" );
+printf("\n");
 scanf( "%d", &verdes);
+	printf("\n");
 	printf( "Introduzca el tiempo del color Amarillo" ); 
+printf("\n");
 scanf( "%d", &amarrillo);
+printf("\n");
 	printf( "Introduzca el tiempo del color Rojo" ); 
+printf("\n");
 scanf( "%d", &rojos);
 system("cls"); 
 system("color A0"); 
